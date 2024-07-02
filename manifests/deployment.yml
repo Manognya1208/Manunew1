@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: manognyamanunew 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: manognyamanunew
+  template:
+    metadata:
+      labels:
+        app: manognyamanunew 
+    spec:
+      containers:
+        - name: manognyamanunew 
+          image: sandeepacr.azurecr.io/manognyamanunew
+          ports:
+          - containerPort: 5000
